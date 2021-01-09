@@ -1,0 +1,16 @@
+.titleCart{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartbtn{
+    background-color: #ab8766;
+    width: 25px;
+}
+
+.high{
+    height: 90px;
+    vertical-align: middle!important;
+}

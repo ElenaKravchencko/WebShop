@@ -1,9 +1,11 @@
 import React from "react";
 import Container from "react-bootstrap/cjs/Container";
-import Row from "react-bootstrap/cjs/Row";
 import {CartItem} from "./Cart";
 import {dataService} from "./DataService";
 import {ShopItem} from "./ShopItem";
+import {Button, Card} from "react-bootstrap";
+import "./ShopCart.css";
+
 
 interface ShopCartComponentState {
     cart: CartItem[];
@@ -43,25 +45,80 @@ export class ShopCartComponent extends React.Component<{}, ShopCartComponentStat
             })
 
         });
+
     }
 
+
+    private addToCart(value: ShopItem) {
+        dataService.addToCart(value);
+        this.forceUpdate();
+        alert('Обновите, пожалуйста, страницу')
+
+    }
+
+
+
     render() {
+
         return (
+
             <Container fluid>
+                <div>
+                    <div className="title">
+                        <h4>Корзина</h4>
+                    </div>
+
                 {
                     this.state.cart.length > 0 && this.state.cart.map(value => {
                         return (
-                            <Row>
-                                <span className={"h3"}>{this.state.cartItemMapping.get(value.itemId)?.title}</span>
-                                <span className={"ml-3 h3"}>Количество: {value.quantity}</span>
-                            </Row>
-                        );
+                                <div className={"row"}>
+                                    <div className="col-1" >
+                                    </div>
+
+                                    <div className="col-3 high">
+                                    <span >{this.state.cartItemMapping.get(value.itemId)?.title}</span>
+                                    </div>
+
+                                    <div className="col-2" > {this.state.cartItemMapping.get(value.itemId)?.price} руб. </div>
+
+                                    <div className={"col-2"}>
+                                        <span>&nbsp;</span>     {value.quantity}  <span>&nbsp;</span>
+                                        <Button  variant="light"  size="sm" className="cartbtn"  onClick={event => this.addToCart(this.state.cartItemMapping.get(value?.itemId)!)} >+</Button>
+                                    </div>
+
+                                    <div className="col-1" >
+                                        <img className="cart-img" alt="cartItmimg" src={this.state.cartItemMapping.get(value.itemId)?.image}/>
+                                    </div>
+
+                                </div>
+
+                    );
                     })
                 }
-
+                </div>
                 {
-                    this.state.cart.length === 0 && (<>Корзина пуста</>)
+                    this.state.cart.length === 0 && (<h4>Корзина пуста</h4>)
                 }
+                <div className={"row"}>
+                    <div className={"col-2"}>
+                    </div>
+                    <div className={"col-8"}>
+                <Card className="text-center">
+                    <Card.Header>Ваш заказ</Card.Header>
+                    <Card.Body>
+                        <Card.Title>Пожалуйста, обратите внимание</Card.Title>
+                        <Card.Text>
+                           На данный момент на нашем сайте ведутся технические работы, оформление заказа может быть недоступно
+                        </Card.Text>
+                        <Button variant="primary"   onClick={() => {
+                            alert('Оформление заказов временно недоступно. Приносим свои извинения!')
+                        }}>Оформить заказ</Button>
+                    </Card.Body>
+                </Card>
+                    </div>
+                    <div className={"col-2"}>
+                    </div>
+                </div>
             </Container>
         );
     }

@@ -1,3 +1,41 @@
 .item-image {
-    height: 300px;
+    width: 200px;
+}
+
+.h4, h6{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.mybtn{
+    background-color: #8b5a2b;
+    color: beige;
+}
+.mybtn:hover{
+    background-color: #b07136;
+    color: beige;
+}
+
+.title {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .title2{
+     margin-top: 35px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+.mar{
+    margin-top: 50px;
+    margin-bottom: 7px;
+}
+
+.cart-img{
+    width: 100%;
+    min-width: 60px;
 }

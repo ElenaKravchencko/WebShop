@@ -80,6 +80,7 @@ class DataService {
         return await (await postPromise).json();
     }
 
+
     public async getCart(): Promise<CartItem[]> {
         let todoResponsePromise: Promise<Response> = fetch(`${DataService.DB_URL}/cart`);
 

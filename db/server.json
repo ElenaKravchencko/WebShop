@@ -1,62 +1,97 @@
 {
   "category": [
     {
-      "id": "MOBILE",
-      "title": "Мобильные телефоны"
+      "id": "NewYear",
+      "title": "Новогодние товары"
     },
     {
-      "id": "LAPTOP",
-      "title": "Лэптопы"
+      "id": "Box",
+      "title": "Коробочки"
+    },
+    {
+      "id": "Home",
+      "title": "Для дома"
     }
   ],
   "item": [
     {
       "id": 0,
-      "category": "MOBILE",
-      "title": "IPhone 12 Pro Max",
-      "price": 1000,
-      "description": "Mobile phone",
-      "image": "https://cache3.youla.io/files/images/780_780/5a/21/5a213aab85e9d21a65394d29.jpg"
+      "category": "NewYear",
+      "title": "Новогодний декор 'Сказочный лес'",
+      "price": 700,
+      "description": "Декор Светильник 'Сказочный лес' - это объемный декор-светильник размером 30см х 10см * 5 см",
+      "image": "/light.jpg",
+      "descriptionImages": [
+        {
+          "image": "/light2.jpg",
+          "title": "Действительно, сказочно!",
+          "p": "Отличный декор - мои дети и муж в восторге!"
+        },
+        {
+          "image": "/light3.jpg",
+          "title": "В жизни еще лучше, чем на фото",
+          "p": "Если у вас нет новогоднего настроения - то этот сказочный лес его спасет)"
+        }
+      ]
     },
     {
       "id": 1,
-      "category": "MOBILE",
-      "title": "IPhone 13 Pro Max",
+      "category": "Home",
+      "title": "Светильник 'Дом'",
       "price": 1000,
-      "description": "Mobile phone",
-      "image": "https://cache3.youla.io/files/images/780_780/5a/21/5a213aab85e9d21a65394d29.jpg"
+      "description": "Светильник 'Дом' наполнит теплом, светом и уютом вашу комнату",
+      "image": "/house.jpg",
+      "descriptionImages": [
+        {
+          "image": "/house.jpg",
+          "title": "Классный!!",
+          "p": "Домик классный даже как декор, а то, что это еще и светильник- вообще порадовало!"
+        }
+      ]
     },
     {
       "id": 2,
-      "category": "MOBILE",
-      "title": "IPhone 14 Pro Max",
-      "price": 1000,
-      "description": "Mobile phone",
-      "image": "https://cache3.youla.io/files/images/780_780/5a/21/5a213aab85e9d21a65394d29.jpg"
+      "category": "NewYear",
+      "title": "Елочное украшение Пингвинчик",
+      "price": 120,
+      "description": "Деревянное украшение елочное Пингвинчик станет отличным подарком для близкого человека и для своего настроения",
+      "image": "/peng.JPG"
     },
     {
       "id": 3,
-      "category": "MOBILE",
-      "title": "IPhone 15 Pro Max",
-      "price": 1000,
-      "description": "Mobile phone",
-      "image": "https://cache3.youla.io/files/images/780_780/5a/21/5a213aab85e9d21a65394d29.jpg"
+      "category": "NewYear",
+      "title": "Елочное украшение Совушки",
+      "price": 150,
+      "description": "Елочное деревянное украшение ручной работы Совушки - это изящный декор для новогодней елки",
+      "image": "/owls.jpg"
     },
     {
       "id": 4,
-      "category": "LAPTOP",
-      "title": "MacBook Pro M1",
-      "price": 2000,
-      "description": "Perfect laptop",
-      "image": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/161127/1_161127.jpg"
+      "category": "Box",
+      "title": "Короб для фотографий дуб",
+      "price": 750,
+      "description": "Короб для фото цвета светлый дуб подойдет для хранения фото из домашнего альбома а также для оформления семейных и детских фотосессий",
+      "image": "/box.jpg"
     },
     {
       "id": 5,
-      "category": "LAPTOP",
-      "title": "MacBook Pro 2020",
-      "price": 2000,
-      "description": "(Not so) Perfect laptop",
-      "image": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/161127/1_161127.jpg"
+      "category": "Box",
+      "title": "Короб для фотографий орех",
+      "price": 1500,
+      "description": "Короб в цвете орех подойдет для фото свадеб и других торжественных мероприятий",
+      "image": "/box3.jpg",
+      "descriptionImages": [
+        {
+          "image": "/upak.jpg",
+          "title": "клиенты в восторге",
+          "p": "Упаковка очень порадовала. Экономлю время на оформлении фотосессий для клиентов"
+        },
+        {
+          "image": "/flash.jpg",
+          "title": "С флешками то, что надо",
+          "p": "Давно искала подобный вариант оформления. Но отсек под флешку - это выше моих ожиданий!"
+        }
+      ]
     }
   ],
   "cart": [
@@ -67,13 +102,23 @@
     },
     {
       "itemId": 2,
-      "quantity": 4,
+      "quantity": 6,
       "id": 1
     },
     {
       "itemId": 3,
-      "quantity": 2,
+      "quantity": 1,
       "id": 2
+    },
+    {
+      "itemId": 0,
+      "quantity": 5,
+      "id": 3
+    },
+    {
+      "itemId": 4,
+      "quantity": 3,
+      "id": 4
     }
   ]
 }

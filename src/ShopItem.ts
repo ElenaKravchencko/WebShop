@@ -1,4 +1,4 @@
-
+import {CaruselItem} from "./CaruselItem";
 
 export interface ShopItem {
     id: number;
@@ -6,4 +6,5 @@ export interface ShopItem {
     price: number;
     description: string;
     image: string;
+    descriptionImages?: CaruselItem[];
 }
